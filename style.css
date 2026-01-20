@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: #000;
+}
+
+/* Logos */
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.logos img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+/* Titres */
+h1 {
+    text-align: center;
+    font-size: 22px;
+    color: #1717d8 ; /* bleu violet identique aux rectangles */
+}
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+h5 {
+    text-align: center;
+    margin: 15px 0;
+}
+
+/* Infos + photo */
+.infos-photo {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.infos {
+    flex: 1;
+    min-width: 220px;
+}
+
+.photo-box {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* ===================== */
+/* RECTANGLE VALIDITÉ */
+/* ===================== */
+
+/* GRAND RECTANGLE BLEU */
+.validite {
+    width: 100%;
+    height: 150px;
+    background-color: #1717d8 ;
+    display: flex;
+    align-items: center;   /* centre verticalement */
+    padding-left: 20px;   /* espace depuis le bord gauche */
+    gap: 25px;
+    margin: 25px 0;
+    border-radius: 4px;
+}
+
+/* PETIT RECTANGLE BLANC — RESTE À GAUCHE */
+.validite-blanc {
+    width: 350px;
+    height: 120px;
+    background-color: white;
+    margin-left: 700px;
+    border-radius: 4px;
+
+    /* 🔥 centrage parfait du texte */
+    display: flex;
+    align-items: center;      /* vertical */
+    justify-content: center;  /* horizontal */
+
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    /* 🔒 verrouillage */
+    flex-shrink: 0;       /* empêche déplacement */
+}
+
+/* TEXTE À DROITE */
+.validite-text {
+    color: white;
+}
+
+/* RESPONSIVE : on garde la structure horizontale */
+@media (max-width: 768px) {
+
+    .validite {
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    .validite-text p {
+        font-size: 14px;
+    }
+}
+
+
+/* Footer */
+.footer-blue {
+    background-color: #1717d8 ;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+.footer-content p {
+    margin: 5px 0;
+}
+
+hr {
+    border: 1px solid black;
+    margin: 20px 0;
+}
+
+
+
+/* ===================== */
+/* 📱 RESPONSIVE MOBILE */
+/* ===================== */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .infos-photo {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    .photo-box {
+        margin-top: 15px;
+    }
+
+    .validite {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .validite-text,
+    .validite-blanc {
+         margin-bottom: 10px;
+    }
+
+    .footer-content {
+        text-align: center;
+    }
+
+    .footer-nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
+
+/* ===================== */
+/* 📱 PETITS TELEPHONES */
+/* ===================== */
+@media (max-width: 480px) {
+
+    body {
+        margin: 10px;
+    }
+
+    .logos img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .photo-box {
+        width: 120px;
+        height: 120px;
+    }
+
+    .validite-text {
+        height: auto;
+    }
+}
